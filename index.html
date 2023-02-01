@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script src="script.js"></script>
     <title>Morse Converter</title>
 </head>
+
 <body>
     <br>
     <header>
@@ -24,26 +26,28 @@
         <br>
         <br>
         <section class="container">
-            <h3>Text to Morse</h4>      
-            <div>
-                <nav>
-                    <textarea name="text" id="text" cols="30" rows="10" wrap="hard" placeholder=" Type here..."></textarea>
-                    <br>
-                    <button onclick="paste_morse()" class="copy_button">
-                        <h5>Paste</h5>
+            <h3>Text to Morse</h4>
+                <div>
+                    <nav>
+                        <textarea name="text" id="text" cols="30" rows="10" wrap="hard"
+                            placeholder=" Type here..."></textarea>
+                        <br>
+                        <button onclick="paste_morse()" class="copy_button">
+                            <h5>Paste</h5>
+                        </button>
+                    </nav>
+                    <button onclick="TexttoMorse()">
+                        <h4>Convert</h4>
                     </button>
-                </nav>
-                <button>
-                    <h4>Convert</h4>
-                </button>
-                <nav>
-                    <textarea name="morse" id="converted_morse" cols="30" rows="10" wrap="hard" placeholder=" Click on convert button..." readonly></textarea>
-                    <br>
-                    <button onclick="copy_morse()" class="copy_button">
-                        <h5>Copy</h5>
-                    </button>
-                </nav>
-            </div>
+                    <nav>
+                        <textarea name="morse" id="converted_morse" cols="30" rows="10" wrap="hard"
+                            placeholder=" Click on convert button..." readonly></textarea>
+                        <br>
+                        <button onclick="copy_morse()" class="copy_button">
+                            <h5>Copy</h5>
+                        </button>
+                    </nav>
+                </div>
         </section>
         <br>
         <hr class="line">
@@ -52,26 +56,28 @@
         <br>
         <br>
         <section class="container">
-            <h3>Morse to Text</h4>      
-            <div>
-                <nav>
-                    <textarea name="morse" id="morse" cols="30" rows="10" wrap="hard" placeholder=" Type here..."></textarea>
-                    <br>
-                    <button onclick="paste_text()" class="copy_button">
-                        <h5>Paste</h5>
+            <h3>Morse to Text</h4>
+                <div>
+                    <nav>
+                        <textarea name="morse" id="morse" cols="30" rows="10" wrap="hard"
+                            placeholder=" Type here..."></textarea>
+                        <br>
+                        <button onclick="paste_text()" class="copy_button">
+                            <h5>Paste</h5>
+                        </button>
+                    </nav>
+                    <button onclick="MorsetoText()">
+                        <h4>Convert</h4>
                     </button>
-                </nav>
-                <button onclick="MorsetoText()">
-                    <h4>Convert</h4>
-                </button>
-                <nav>
-                    <textarea name="text" id="converted_text" cols="30" rows="10" wrap="hard" placeholder=" Click on convert button..." readonly></textarea>
-                    <br>
-                    <button onclick="copy_text()" class="copy_button">
-                        <h5>Copy</h5>
-                    </button>
-                </nav>
-            </div>
+                    <nav>
+                        <textarea name="text" id="converted_text" cols="30" rows="10" wrap="hard"
+                            placeholder=" Click on convert button..." readonly></textarea>
+                        <br>
+                        <button onclick="copy_text()" class="copy_button">
+                            <h5>Copy</h5>
+                        </button>
+                    </nav>
+                </div>
         </section>
         <br>
         <hr class="line">
@@ -89,4 +95,5 @@
         <br>
     </footer>
 </body>
+
 </html>
