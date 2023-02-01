@@ -63,7 +63,7 @@ body {
     color: black;
 }
 
-.container button {
+button {
     background-color: var(--color4);
     border: none;
     height: 50px;
@@ -74,16 +74,12 @@ body {
     transition: 0.4s ease-in-out;
 }
 
-.container button:hover {
+button:hover {
     background-color: var(--color1);
     border: 1px solid var(--color3);
     width: 150px;
     color: var(--color5);
     box-shadow: 0px 0px 51px 11px var(--color2);
-}
-
-.copy_button button {
-    margin-top: -20px;
 }
 
 footer {
