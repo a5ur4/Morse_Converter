@@ -27,24 +27,24 @@ const morseAlphabet = {
     "--..":"Z",
 }
 
-function paste_morse(){
+function paste_morse() {
     var paste = document.getElementById('text')
     navigator.clipboard.readText().then((clipText) => (paste.innerText = clipText));
 }
 
-function paste_text(){
+function paste_text() {
     var paste = document.getElementById('morse')
     navigator.clipboard.readText().then((clipText) => (paste.innerText = clipText));
 }
 
-function copy_morse(){
+function copy_morse() {
     var copy = document.getElementById("converted_morse")
     copy.select()
     copy.setSelectionRange(0, 999)
     navigator.clipboard.writeText(copy.value);
 }
 
-function copy_text(){
+function copy_text() {
     var copy = document.getElementById("converted_text")
     copy.select()
     copy.setSelectionRange(0, 999)
