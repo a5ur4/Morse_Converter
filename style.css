@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+
+:root {
+    --color1: #141414;
+    --color2: #002F63;
+    --color3: #003D82;
+    --color4: #0C53A6;
+    --color5: #2B6ABC;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Serif', serif;
+    background-color: var(--color1);
+}
+
+.line {
+    border: 1px solid var(--color3);
+    width: 50%;
+}
+
+.line_middle {
+    border: 1px solid var(--color3);
+    width: 25%;
+}
+
+#head_container {
+    text-align: center;
+    color: var(--color4);
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: var(--color4);
+}
+
+.container div {
+    display: flex;
+    padding-top: 20px;
+}
+
+.container div textarea {
+    background-color: var(--color1);
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid var(--color3);
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    transition: 0.4s ease-in-out;
+    color: var(--color5);
+    font-size: medium;
+    font-weight: 700;
+}
+
+.container div textarea:focus {
+    background-color: white;
+    box-shadow: 0px 0px 51px 11px var(--color2);
+    color: black;
+}
+
+.container button {
+    background-color: var(--color4);
+    border: none;
+    height: 50px;
+    width: 130px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 70px;
+    transition: 0.4s ease-in-out;
+}
+
+.container button:hover {
+    background-color: var(--color1);
+    border: 1px solid var(--color3);
+    width: 150px;
+    color: var(--color5);
+    box-shadow: 0px 0px 51px 11px var(--color2);
+}
+
+.copy_button button {
+    margin-top: -20px;
+}
+
+footer {
+    color: var(--color5);
+    text-align: center;
+}
+
+footer img {
+    background-color: var(--color4);
+    border-radius: 30px;
+    height: 45px;
+    width: 45px;
+    transition: 0.4s ease-in-out;
+}
+
+footer img:hover {
+    box-shadow: 0px 0px 51px 11px var(--color2);
+}
