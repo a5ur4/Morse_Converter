@@ -1,18 +1,5 @@
 const morseAlphabetV1 = {
 
-    // Characters to transform Morse code in Text
-    ".-":"A", "-...":"B", "-.-.":"C", "-..":"D",
-    ".":"E", "..-.":"F", "--.":"G", "....":"H",
-    "..":"I", ".---":"J", "-.-":"K", ".-..":"L",
-    "--":"M", "-.":"N", "---":"O", ".--.":"P",
-    "--.-":"Q", ".-.":"R", "...":"S", "-":"T",
-    "..-":"U", "...-":"V", ".--":"W", "-..-":"X",
-    "-.--":"Y", "--..":"Z",  "/" : " "
-
-}
-
-const morseAlphabetV2 = {
-
     // Characters to transform Text in Morse code
     "0" : "-----",
     "1" : ".----", "2" : "..---", "3" : "...--",
@@ -33,24 +20,37 @@ const morseAlphabetV2 = {
 
 }
 
-function paste_morse() {
+const morseAlphabetV2 = {
+
+    // Characters to transform Morse code in Text
+    ".-":"A", "-...":"B", "-.-.":"C", "-..":"D",
+    ".":"E", "..-.":"F", "--.":"G", "....":"H",
+    "..":"I", ".---":"J", "-.-":"K", ".-..":"L",
+    "--":"M", "-.":"N", "---":"O", ".--.":"P",
+    "--.-":"Q", ".-.":"R", "...":"S", "-":"T",
+    "..-":"U", "...-":"V", ".--":"W", "-..-":"X",
+    "-.--":"Y", "--..":"Z", "/" : " ", 
+
+}
+
+function paste_morse(){
     var paste = document.getElementById('text')
     navigator.clipboard.readText().then((clipText) => (paste.innerText = clipText));
 }
 
-function paste_text() {
+function paste_text(){
     var paste = document.getElementById('morse')
     navigator.clipboard.readText().then((clipText) => (paste.innerText = clipText));
 }
 
-function copy_morse() {
+function copy_morse(){
     var copy = document.getElementById("converted_morse")
     copy.select()
     copy.setSelectionRange(0, 999)
     navigator.clipboard.writeText(copy.value);
 }
 
-function copy_text() {
+function copy_text(){
     var copy = document.getElementById("converted_text")
     copy.select()
     copy.setSelectionRange(0, 999)
@@ -60,7 +60,7 @@ function copy_text() {
 function MorsetoText() {
     var textToConvert = document.getElementById('morse').value
     textToConvert = textToConvert.toUpperCase()
-    var ConvertedText = textToConvert.replace(/([-/\./.-]+[-./\./-]*)/g, (_, el) =>morseAlphabetV1 [el]);
+    var ConvertedText = textToConvert.replace(/([-/\./.-]+[-./\./-]*)/g, (_, el) =>morseAlphabetV2 [el]);
     document.getElementById('converted_text').value = ConvertedText
 }
 
@@ -69,8 +69,8 @@ function TexttoMorse() {
     MorsetoConvert = MorsetoConvert.toUpperCase()
     let split = MorsetoConvert.split("")
     let map = split.map(x => {
-        if (morseAlphabetV2[x]) {
-            return morseAlphabetV2[x]
+        if (morseAlphabetV1[x]) {
+            return morseAlphabetV1[x]
         } else {
             return x
         }
