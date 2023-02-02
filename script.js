@@ -57,13 +57,6 @@ function copy_text(){
     navigator.clipboard.writeText(copy.value);
 }
 
-function MorsetoText() {
-    var textToConvert = document.getElementById('morse').value
-    textToConvert = textToConvert.toUpperCase()
-    var ConvertedText = textToConvert.replace(/([-/\./.-]+[-./\./-]*)/g, (_, el) =>morseAlphabetV2 [el]);
-    document.getElementById('converted_text').value = ConvertedText
-}
-
 function TexttoMorse() {
     var MorsetoConvert = document.getElementById('text').value
     MorsetoConvert = MorsetoConvert.toUpperCase()
@@ -77,4 +70,12 @@ function TexttoMorse() {
     })
     var finalMessage = map.join(" ")
     document.getElementById('converted_morse').value = finalMessage
+}
+
+
+function MorsetoText() {
+    var textToConvert = document.getElementById('morse').value
+    textToConvert = textToConvert.toUpperCase()
+    var ConvertedText = textToConvert.replace(/([-/\./.-]+[-./\./-]*)/g, (_, el) =>morseAlphabetV2 [el]);
+    document.getElementById('converted_text').value = ConvertedText
 }
