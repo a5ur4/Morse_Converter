@@ -8,6 +8,16 @@
     --color5: #2B6ABC;
 }
 
+::-webkit-scrollbar {
+    background-color: var(--color1);
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color5);
+    border-radius: 30px;
+}
+
 body {
     padding: 0;
     margin: 0;
