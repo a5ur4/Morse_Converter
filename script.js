@@ -72,7 +72,6 @@ function TexttoMorse() {
     document.getElementById('converted_morse').value = finalMessage
 }
 
-
 function MorsetoText() {
     var textToConvert = document.getElementById('morse').value
     textToConvert = textToConvert.toUpperCase()
