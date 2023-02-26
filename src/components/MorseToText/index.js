@@ -70,6 +70,7 @@ export default function MorseToText() {
         var MorseToConvert = morse
         MorseToConvert = MorseToConvert.toUpperCase()
         var ConvertedMorse = MorseToConvert.replace(/([-/\./.-]+[-./\./-]*)/g, (_, el) =>morseAlphabet [el]);
+        ConvertedMorse = ConvertedMorse.replace(/\s/g, '')
         setText(ConvertedMorse)
         setMorse(null)
     }
